@@ -1,10 +1,16 @@
 # Website Sync — The Demon Core
 
-This file is the content contract between this project and `tjscientist/jeff-web` (MyWebssite).
+> **Canonical rules live in the Standard:** `MyWebssite/docs/standard/` (formatting, figure directives, cross-ref conventions, heading hierarchy). This file records only the **project-specific content contract** the website's importer relies on. Where this file and the Standard disagree, the Standard wins.
+
+## The website is the sole renderer
+
+The site `other.fubsypoly.com` renders this project's content via the shared `packages/ui` design system (repo `tjscientist/fubsypoly`, previously `jeff-web`). It reads a read-only snapshot of the source files below — it never consumes the local `_build/build_single_html.py` HTML output. **The `_build/build_single_html.py` builder is deprecated legacy** — retained for provenance, not maintained. Author clean Markdown; the website renders it.
+
+This project's repo is `tjscientist-labs/otherstuff-demon-core` (private, transferred from the earlier `tjscientist/` namespace).
 
 ## What syncs
 
-The `tjscientist/jeff-web` importer pulls a read-only snapshot of:
+The `apps/other/sync-other.ts` importer pulls a read-only snapshot of:
 
 - `02-inputs/deep_dive/*.md` — published as the page body (one page per `vol*.md`, or merged into a single page; the site decides)
 - `02-inputs/deep_dive/figs/**` — images referenced from the Markdown
@@ -19,7 +25,7 @@ The following are **NOT** synced:
 
 ## Hard dependencies (don't refactor without coordinating)
 
-- **`<!-- FIGURE: filename :: caption :: credit -->`** directive — the importer parses this exactly. Format must match the Brewing and Distilling and Electronics convention.
+- **`<!-- FIGURE: filename :: caption :: credit -->`** directive — the importer parses this exactly. Format must match the OtherStuff / Electronics convention.
 - **`vol_NN_*.md` / `volN.md` filename convention** — the importer uses the leading digit to order pages.
 - **Figure paths must be relative** to the `.md` file (e.g. `figs/agnew_with_box.jpg`).
 

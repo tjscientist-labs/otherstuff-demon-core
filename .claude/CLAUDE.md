@@ -32,7 +32,7 @@ A two-track personal project covering the 6.2 kg plutonium-gallium sphere — or
 
 - **Goal 1** — Ship a historically accurate, publishable history of the demon core that gets dates, doses, and configurations right, citing primary and tertiary sources, and presents the two fatalities with the gravity they deserve. Target ~6,000 words in vol1.
 - **Goal 2** — Build a display-quality replica of the core (~89 mm sphere) and its carrying box, with photographs documenting the build for vol2. The replica is non-functional, non-fissile, and made from inert hobby materials (PLA / resin / wood / aluminum or steel hardware).
-- **Goal 3** — Have both volumes ready for ingestion into `tjscientist/jeff-web` (MyWebssite) without further editing, per `WEBSITE_SYNC.md`.
+- **Goal 3** — Have both volumes ready for ingestion into `tjscientist/fubsypoly` (MyWebssite) without further editing, per `WEBSITE_SYNC.md`.
 
 **Success criteria**: vol1 reads like a museum panel; vol2 reads like a Tested write-up; the finished replica sits on a shelf and looks the part.
 
