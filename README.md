@@ -21,4 +21,4 @@ Layout conventions live in `../`'s CLAUDE.md and the Electronics umbrella's `_sh
 
 ## Website
 
-Markdown under `02-inputs/deep_dive/` syncs to `tjscientist/jeff-web` per `WEBSITE_SYNC.md`. The two volumes will become one or two pages on the OtherStuff sub-site.
+Markdown under `02-inputs/deep_dive/` syncs to `tjscientist/fubsypoly` per `WEBSITE_SYNC.md`. The two volumes will become one or two pages on the OtherStuff sub-site.
