@@ -6,7 +6,7 @@ Last touched: **2026-05-26** — added 13 new figures to vol2: 8 component photo
 
 - **Vol 1 (history):** complete, publishable. 4/5 figures in. One open errata: Daghlian dose figure (200 rad neutron + 110 rad gamma vs. ~510 rem total) cited both ways — resolve before website publication.
 - **Vol 2 (build):** fully rewritten 2026-05-25; figure pass on 2026-05-26 brings vol2 from 7 → 20 figures. Adam-Savage-exact dual-box build (one black crackle / one zinc-chromate yellow) sharing one bisected 3.5″ MT-17F WNF tungsten heavy-alloy sphere with a hand-fabricated Po-Be Urchin replica in the central cavity. Legacy PLA/plywood path demoted to budget appendix §10.
-- **Consolidated HTML:** `03-outputs/The_Demon_Core_Complete.html`, 2 vols / 56 TOC entries / **4.6 MB** (up from 2.6 MB after the figure pass). Rebuild with `python _build/build_single_html.py`.
+- **Consolidated HTML:** `03-outputs/The_Demon_Core_Complete.html` (2 vols / 56 TOC entries / 4.6 MB) is **deprecated legacy** — the website renders the Markdown directly; no local rebuild.
 - **Figures:** 27 files in `02-inputs/deep_dive/figs/` (14 prior + 10 new photos + 3 original SVG drawings). All FIGURE markers resolve cleanly. No `fig-missing` placeholders remain; `build_progress_grid.jpg` was removed during the 2026-05-25 rewrite, so the build is fig-complete pending Jeff's actual progress photos which can replace any reference photo in §2–§6.
 - **Original labeled drawings (new 2026-05-26):**
   - `drawing_box_assembly_labeled.svg` — full box cutaway, 21 numbered callouts, material key + build sequence panels (§4 end)
@@ -42,8 +42,8 @@ Last touched: **2026-05-26** — added 13 new figures to vol2: 8 component photo
 ## Commands quick-reference
 
 ```powershell
-# Rebuild the consolidated HTML (run from project root)
-python _build/build_single_html.py
+# The website renders the Markdown — there is no local HTML build step.
+# (The legacy _build/build_single_html.py is deprecated, not maintained.)
 
 # Photo Helper queue is at C:\Users\Jeff\Documents\Claude\Projects\Photo Helper\_queue
 # (See global CLAUDE.md for the queue protocol)
