@@ -4,7 +4,13 @@ Last touched: **2026-05-26** — added 13 new figures to vol2: 8 component photo
 
 ## State
 
-- **Vol 1 (history):** complete, publishable. 4/5 figures in. One open errata: Daghlian dose figure (200 rad neutron + 110 rad gamma vs. ~510 rem total) cited both ways — resolve before website publication.
+- **Vol 1 (history):** complete, publishable. 4/5 figures in. ~~One open errata: Daghlian dose figure
+  (200 rad neutron + 110 rad gamma vs. ~510 rem total) cited both ways — resolve before website
+  publication.~~ **✅ 2026-09-16 — CORRECTED: the errata is RESOLVED.** `vol1.md:51` already
+  reconciles both figures in one sentence — "about 200 rad of neutron and 110 rad of gamma at the
+  body, or roughly 510 rem in total — figures vary between sources because of how the doses were
+  modeled and converted, and the original measurements were necessarily indirect." Nothing blocks
+  publication on this point; **do not re-investigate it.**
 - **Vol 2 (build):** fully rewritten 2026-05-25; figure pass on 2026-05-26 brings vol2 from 7 → 20 figures. Adam-Savage-exact dual-box build (one black crackle / one zinc-chromate yellow) sharing one bisected 3.5″ MT-17F WNF tungsten heavy-alloy sphere with a hand-fabricated Po-Be Urchin replica in the central cavity. Legacy PLA/plywood path demoted to budget appendix §10.
 - **Consolidated HTML:** `03-outputs/The_Demon_Core_Complete.html` (2 vols / 56 TOC entries / 4.6 MB) is **deprecated legacy** — the website renders the Markdown directly; no local rebuild.
 - **Figures:** 27 files in `02-inputs/deep_dive/figs/` (14 prior + 10 new photos + 3 original SVG drawings). All FIGURE markers resolve cleanly. No `fig-missing` placeholders remain; `build_progress_grid.jpg` was removed during the 2026-05-25 rewrite, so the build is fig-complete pending Jeff's actual progress photos which can replace any reference photo in §2–§6.
@@ -12,7 +18,9 @@ Last touched: **2026-05-26** — added 13 new figures to vol2: 8 component photo
   - `drawing_box_assembly_labeled.svg` — full box cutaway, 21 numbered callouts, material key + build sequence panels (§4 end)
   - `drawing_sphere_urchin_cross_section.svg` — assembled + exploded views, per-hemisphere machining sequence (§2 end)
   - `drawing_urchin_replica_detail.svg` — equator + polar views at 3× scale, original-vs-replica comparison table (§3 end)
-- **Git:** not initialized. Per OtherStuff umbrella convention, Jeff runs `git init` + `gh repo create tjscientist/otherstuff-demon-core` when ready to back up.
+- **Git:** ~~not initialized.~~ **✅ 2026-09-16 — CORRECTED: this IS its own git repo**, backed up at
+  `tjscientist-labs/otherstuff-demon-core`, on `main` and level with `origin/main` (verified
+  2026-09-16, latest commit `3006518`). Commit and push here directly — do **not** run `git init`.
 - **CAD / manufacturing files:** none yet. `03-outputs/manufacturing/` directories empty.
 
 ## What to do next (in priority order)
@@ -20,7 +28,8 @@ Last touched: **2026-05-26** — added 13 new figures to vol2: 8 component photo
 1. **Place the MT-17F WNF custom-quote order with Midwest Tungsten Service** — 6-8 week lead time, ~$1,300 estimate. Email `mts@tungsten.com` referencing Adam Savage's certification format (3.500″ ± 0.005″, MT-17F WNF, mercury-free cert, as-ground finish). The whole build is gated on this part.
 2. **Order Richlite** in parallel — 8× 8″×8″×2″ slabs from Maker Material Supply (~$320). 1-week lead.
 3. **Identify a wire-EDM job shop** locally. Get a quote for a single equatorial cut on a 3.5″ tungsten heavy-alloy sphere with a custom V-block cradle (~$250 expected). Have this contact ready before the sphere arrives.
-4. **Resolve the Daghlian dose discrepancy** in vol1 §3 — pick the better-sourced figure and add a single footnote on the alternate. Required for website publication.
+4. ~~**Resolve the Daghlian dose discrepancy** in vol1 §3~~ — **✅ DONE (see State, above).** `vol1.md:51`
+   carries both figures with the reconciling note. No action.
 5. **Once the sphere arrives**, measure its actual diameter to 0.001″ and update vol2 §4.3 with the exact cavity-target dimension before the radius-cutter setup.
 6. **As you build**, drop progress photos into `02-inputs/deep_dive/figs/build_*.jpg` and replace the `build_progress_grid.jpg` placeholder in vol2.
 7. **Design the LANL property tag** — `04-templates/property_tag.pdf` from a vector master. Sample field text already drafted in vol2 §7.2 (includes the HKD/LAS inspector-initial memorial to Daghlian and Slotin).
@@ -41,10 +50,19 @@ Last touched: **2026-05-26** — added 13 new figures to vol2: 8 component photo
 
 ## Commands quick-reference
 
-```powershell
-# The website renders the Markdown — there is no local HTML build step.
-# (The legacy _build/build_single_html.py is deprecated, not maintained.)
+**✅ 2026-09-16 — CORRECTED:** this block was a `powershell` fence holding only deprecated commands.
+It is now plain notes — there are no commands to run in this project.
 
-# Photo Helper queue is at ~/Documents/claude/Projects/Photo Helper/_queue
-# (See global CLAUDE.md for the queue protocol)
-```
+- The website renders the Markdown directly — **there is no local HTML build step.** The legacy
+  `_build/build_single_html.py` and `03-outputs/The_Demon_Core_Complete.html` are deprecated; do not
+  rebuild or maintain them.
+- Fetching images/PDFs: use the shared engine at
+  `~/Documents/claude/Projects/Photo Helper/` (`fetch_util.py` / `fetch_core.js`). **Never write a new
+  fetcher.** See the global `~/.claude/CLAUDE.md` rule.
+- Git: this repo is `tjscientist-labs/otherstuff-demon-core` — commit and push from this directory.
+
+## ▶ Genuinely open (2026-09-16)
+
+All three are **Jeff's purchases / outside quotes**, not desk work — items 1–3 above:
+the ~$1,300 MT-17F WNF tungsten sphere, the Richlite slabs, and the wire-EDM shop quote.
+The whole build gates on the sphere.
