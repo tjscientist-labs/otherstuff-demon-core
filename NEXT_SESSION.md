@@ -45,6 +45,6 @@ Last touched: **2026-05-26** — added 13 new figures to vol2: 8 component photo
 # The website renders the Markdown — there is no local HTML build step.
 # (The legacy _build/build_single_html.py is deprecated, not maintained.)
 
-# Photo Helper queue is at C:\Users\Jeff\Documents\Claude\Projects\Photo Helper\_queue
+# Photo Helper queue is at ~/Documents/claude/Projects/Photo Helper/_queue
 # (See global CLAUDE.md for the queue protocol)
 ```
